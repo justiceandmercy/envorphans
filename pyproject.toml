@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envorphans"
+version = "0.1.0"
+description = "Find environment variables defined in .env files but never referenced in source code."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [{name = "envorphans contributors"}]
+
+[project.scripts]
+envorphans = "envorphans.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["envorphans*"]
